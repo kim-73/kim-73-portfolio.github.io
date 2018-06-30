@@ -1,0 +1,402 @@
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+@media (min-width: 768px) {
+    .navbar-default .navbar-nav > li > a {
+        text-align: center;
+    }
+}
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {
+    p {
+        @include fontSize (20px);
+        line-height: 1.4rem;
+    }
+    li {
+        @include fontSize(20px);
+    }
+    .intro {
+        height: 313px;
+        margin-top:70px;
+    }
+    .introText {
+        h1 {
+            @include fontSize(280px);
+            text-align: center;
+            line-height: 150px;
+        }
+    }
+    .introTextRight {
+        padding-top: 0px;
+        h2 {
+            @include fontSize(80px);
+            text-align: center;
+            line-height: 30px;
+        }
+        h3 {
+            @include fontSize(33px) text-align: center;
+            line-height: 20px;
+        }
+    }
+
+    
+}
+    .aboutMe {
+        position: relative;
+        h1 {
+            @include fontSize(60px) padding-left: 15px;
+            padding-top: 32px;
+            line-height: 10px;
+        }
+    }
+    .aboutMe {
+        h2 {
+            @include fontSize(60px) line-height: 5px;
+        }
+        h3 {
+            @include fontSize(30px)
+        }
+        // p {
+        //     @include fontSize(20px)
+        // }
+
+    }
+    .contact {
+        height: 750px;
+    }
+    .form {
+        margin-top:20px;
+    }
+
+
+
+    .kimImg {
+        margin-top: 0px;
+    }
+    .employment {
+        h1 {
+            @include fontSize(60px) padding-left: 15px;
+            padding-top: 32px;
+            line-height: 10px;
+        }
+        h2 {
+        	@include fontSize(24px);
+        }
+
+        h3{
+        	@include fontSize(24px);
+        }
+    }
+    .employCopy {
+    	padding-left:0px;
+    	margin-top: -40px;
+    }
+    .employCopy2 {
+    	padding-left:0px;
+    	margin-top: -40px;
+    }
+    .employCopy3 {
+    	margin-top: -40px;
+    }
+    .skills {
+    	height: 1400px;
+        }
+    .skills {
+    	h1 {
+    		@include fontSize(60px) padding-left: 15px;
+            padding-top: 32px;
+            line-height: 10px;
+    	}
+    }
+    .row1 {
+    	h1{
+    		@include fontSize(50px);
+    		text-align:center;
+    	}
+    }
+    .row1 {
+    	img{
+    		margin: auto;
+    	}
+    }
+    .icons {
+    	margin-top:20px;
+    	h2{
+    		text-align:center;
+    	}
+    	p {
+    		text-align:center;
+    	}
+    }
+    .references {
+        height: 800px;
+        @include fontSize(60px) padding-left: 15px;
+            padding-top: 32px;
+            line-height: 10px;
+    }
+    .social {
+    margin-left: -40px;
+    }
+    h2 {
+        @include fontSize(20px);
+    }
+    .portfolio {
+        h1 {
+            @include fontSize(60px) padding-left: 15px;
+            padding-top: 32px;
+            line-height: 10px;
+
+        }
+    }
+    .sz_portfolio_001_slide_txt>h1 {
+        @include fontSize(24px);
+    color: #fff;
+    text-transform: uppercase;
+    padding-left:0;
+    padding-bottom:10px;
+
+
+
+
+
+
+
+
+    
+
+}
+
+
+/* Small Devices, Tablets */
+
+@media screen and (min-width:474px) {
+	.introText {
+	h1 {
+            @include fontSize(200px);
+        }
+	}
+	.kimImg {
+		display:block;
+		padding-left: 50px;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.introText {
+	h1 {
+            @include fontSize(220px);
+            text-align:left;
+        }
+	}
+	.introTextRight {
+		h2 {
+			@include fontSize(95px);
+			text-align: right;
+		}
+		h3 {
+			@include fontSize(36px);
+			text-align:right;
+		}
+	}
+
+
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+
+
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+    p {
+        @include fontSize(20px);
+    }
+
+
+
+    .intro {
+        height: 500px;
+        margin-top:80px;
+        padding-top:40px;
+    }
+    .introText {
+        h1 {
+            @include fontSize(376px);
+        }
+    }
+    .introTextRight {
+        padding-top: 130px;
+        h2 {
+            @include fontSize(97px);
+            text-align: right;
+        }
+        h3 {
+            @include fontSize(33px);
+            text-align: right;
+        }
+    }
+    .aboutMe {
+        height: 700px;
+        h1 {
+            @include fontSize(191px);
+            padding-top: 163px;
+        }
+        h2 {
+            @include fontSize(65px);
+        }
+        h3 {
+            @include fontSize(42px);
+        }
+        // p {
+        //     @include fontSize(20px);
+        // }
+    }
+   .aboutMe svg {
+    z-index: 2;
+    position: absolute;
+    top:400px;
+    left:-80px;
+    width: 80px;
+    height:80px;
+
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+    .meCopy {
+        padding-left: 80px;
+    }
+    .kimImg {
+        margin-top: -105px;
+        float: right;
+    }
+    .employment {
+        position: relative;
+    	height:1500px;
+    	h1 {
+    		@include fontSize(191px);
+    		padding-top: 163px;
+    	}
+    }
+    .employment {
+    	h2 {
+    		@include fontSize(35px);
+    	}
+    	h3 {
+    		@include fontSize(35px);
+    	}
+    }
+    .employCopy2 {
+    	margin-left: 80px;
+    	padding-top: 290px;
+    }
+    .employCopy3 {
+    	margin-top: -180px;
+    }
+      .employment svg {
+    z-index: 2;
+    position: absolute;
+    top:450px;
+    left:0px;
+    width: 80px;
+    height:80px;
+
+}
+    .skills {
+    	height:1000px;
+    	h1 {
+    		@include fontSize (191px);
+    		padding-top: 163px;
+    	}
+    }
+    .icons {
+    	margin-top:100px;
+    	h2{
+    		text-align:center;
+    	}
+    	p {
+    		text-align:center;
+    	}
+    }
+    .portfolio {
+    	height:1000px;
+    	h1 {
+    		@include fontSize (191px);
+    		padding-top: 163px;
+              padding-bottom: 50px;
+    	}
+    }
+    .references{
+        height:1200px;
+        h1 {
+            @include fontSize (191px);
+            padding-top: 163px;
+        }
+    }
+    .quote1left {
+        margin-top: 20px;
+
+    }
+    p{
+        // line-height: 1.4rem;
+        margin-top: 10px;
+    }
+    h2 {
+        @include fontSize(26px);
+    }
+    .sz_portfolio_001_slide_txt>h1 {
+        @include fontSize(50px);
+    color: #fff;
+    text-transform: uppercase;
+    padding-left:0;
+    padding-bottom:10px;
+
+
+    }
+    .sz_portfolio_001_trig_txt_name>span {
+        @include fontSize(30px);
+        color: $white;
+        display: block;
+        text-transform: uppercase
+    }
+
+
+    .contact {
+        height: 650px;
+    }
+    form input[type="text"] {
+        @include fontSize(20px);
+    }
+    .social {
+    margin-left: 0px;
+}
+}
+
+
+
